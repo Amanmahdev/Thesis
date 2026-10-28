@@ -1,5 +1,5 @@
 name: thesis/js-incomplete-mitigation
 version: 0.1.0
-description: Custom CodeQL queries for incomplete mitigations in LLM-generated JavaScript (thesis RQ3)
+description: Custom CodeQL queries for incomplete mitigations in LLM-generated JavaScript
 dependencies:
   codeql/javascript-all: "*"
