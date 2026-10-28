@@ -1,0 +1,26 @@
+# thesis-target.qls
+# Target classes only: XSS, prototype pollution, log injection.
+# Selected by query ID from the standard JavaScript pack, so a query runs
+# whether or not it belongs to the default or security-extended suite.
+# Verify before use:  codeql resolve queries thesis-target.qls
+# Remove any ID that does not resolve in your CodeQL version.
+
+- description: Thesis target classes (XSS, prototype pollution, log injection)
+
+- queries: .
+  from: codeql/javascript-queries
+
+- include:
+    id:
+      # --- Cross-site scripting (flow-dependent group) ---
+      - js/xss
+      - js/reflected-xss
+      - js/stored-xss
+      - js/xss-through-dom
+      - js/xss-through-exception
+      # --- Log injection (flow-dependent group) ---
+      - js/log-injection
+      # --- Prototype pollution (completeness-dependent group) ---
+      - js/prototype-pollution
+      - js/prototype-pollution-utility
+      - js/prototype-polluting-assignment

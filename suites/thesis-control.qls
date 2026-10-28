@@ -1,0 +1,21 @@
+# thesis-control.qls
+# Local-pattern control group: SQL injection, weak cryptography, insecure randomness.
+# Run separately from the target suite so results can be reported per group.
+# Verify before use:  codeql resolve queries thesis-control.qls
+# Remove any ID that does not resolve in your CodeQL version.
+
+- description: Thesis control group (SQL injection, weak cryptography)
+
+- queries: .
+  from: codeql/javascript-queries
+
+- include:
+    id:
+      # --- SQL injection ---
+      - js/sql-injection
+      # --- Weak cryptography and insecure random values ---
+      - js/weak-cryptographic-algorithm
+      - js/insufficient-password-hash
+      - js/insufficient-key-size
+      - js/insecure-randomness
+      - js/biased-cryptographic-random
