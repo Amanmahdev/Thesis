@@ -1,9 +1,6 @@
 # thesis-target.qls
 # Target classes only: XSS, prototype pollution, log injection.
 # Selected by query ID from the standard JavaScript pack, so a query runs
-# whether or not it belongs to the default or security-extended suite.
-# Verify before use:  codeql resolve queries thesis-target.qls
-# Remove any ID that does not resolve in your CodeQL version.
 
 - description: Thesis target classes (XSS, prototype pollution, log injection)
 
