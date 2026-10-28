@@ -1,8 +1,5 @@
 # thesis-control.qls
 # Local-pattern control group: SQL injection, weak cryptography, insecure randomness.
-# Run separately from the target suite so results can be reported per group.
-# Verify before use:  codeql resolve queries thesis-control.qls
-# Remove any ID that does not resolve in your CodeQL version.
 
 - description: Thesis control group (SQL injection, weak cryptography)
 
